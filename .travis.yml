@@ -1,0 +1,15 @@
+sudo: required
+
+language: go
+
+go:
+  - 1.9.x
+
+services:
+  - docker
+
+script:
+ - go test -v ./tests
+ - export GOARCH=386
+ - go build -o main.exe app.go
+ - docker build -t citrus-tart/certificate-aggregator .

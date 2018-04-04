@@ -1,0 +1,4 @@
+# environmental variables
+.env
+
+*.exe
